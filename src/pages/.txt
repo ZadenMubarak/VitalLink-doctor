@@ -1,0 +1,1 @@
+java -jar bundletool.jar build-apks --bundle="application-03262490-e120-475d-bb0b-b53ba54c3b49.aab" --output="VitalLink.apks" --mode=universal --ks="my-release-key.jks" --ks-key-alias="my-key-alias" --ks-pass="pass:@Incorrect1" --key-pass="pass:@Incorrect1"
