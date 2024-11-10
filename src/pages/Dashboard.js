@@ -31,6 +31,9 @@ import Button from '@mui/material/Button';
 import Home from './Home';
 import Requests from './Requests';
 import AcceptedAppointments from './Appointment';
+import Patients from './Patients';
+import Settings from './Settings';
+import Reports from './Reports';
 
 const drawerWidth = 240;
 
@@ -91,7 +94,7 @@ function Dashboard(props) {
       <List>
         {['Reports', 'Settings', 'Logout'].map((text, index) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton onClick={text === 'Logout' ? handleLogout : null}>
+            <ListItemButton onClick={()=> {if (text === 'Logout'){handleLogout()}else{setPortalState(text.toLowerCase())}}}>
               <ListItemIcon>
                 {index === 0 && <AnalyticsIcon/>}
                 {index === 1 && <SettingsIcon/>}
@@ -173,6 +176,7 @@ function Dashboard(props) {
         <Typography variant="h4" gutterBottom>
           Welcome to the Dashboard
         </Typography>
+
         {isSuperuser && (
           <Typography variant="body1" color="primary" gutterBottom>
             Superuser Access: You have additional permissions.
@@ -185,9 +189,20 @@ function Dashboard(props) {
             {portalState === 'appointments' && (
                 <AcceptedAppointments/>
             )}
+            {portalState === 'patients' && (
+                <Patients/>
+            )}
+            {portalState === 'reports' && (
+              <Reports/>
+            )}
+            {portalState === 'settings' && (
+              <Settings/>
+              )}
+
             
           </Typography>
         )}
+
         {!isSuperuser && (
             <>
                 {portalState === 'home' && (
@@ -199,11 +214,20 @@ function Dashboard(props) {
                 {portalState === 'appointments' && (
                 <AcceptedAppointments/>
                 )}
+                {portalState === 'patients' && (
+                  <Patients/>
+                )}
+                {portalState === 'reports' && (
+              <Reports/>
+            )}
+            {portalState === 'settings' && (
+              <Settings/>
+              )}
             </>
 
         )}
 
-        <Typography>{portalState}</Typography>
+        {/* <Typography>{portalState}</Typography> */}
       </Box>
     </Box>
   );
