@@ -149,7 +149,7 @@ export default function App() {
   useEffect(() => {
     const fetchPendingAppointments = async () => {
       try {
-        const response = await fetch(`http://127.0.0.1:5000/doctor/get_pending_appointments/${doctorId}`, {
+        const response = await fetch(`https://appoftheyear-439917.nw.r.appspot.com/doctor/get_pending_appointments/${doctorId}`, {
           method: 'GET',
           credentials: 'include',
           headers: {
