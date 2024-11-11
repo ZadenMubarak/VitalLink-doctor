@@ -35,6 +35,10 @@ import Patients from './Patients';
 import Settings from './Settings';
 import Reports from './Reports';
 
+//
+
+import Logo from '../assets/VitalLink.png'
+
 const drawerWidth = 240;
 
 function Dashboard(props) {
@@ -72,10 +76,16 @@ function Dashboard(props) {
 
   const drawer = (
     <div>
-      <Toolbar />
+      <Toolbar>
+        <IconButton>
+          {/* <MenuIcon /> */}
+          <img src={Logo} alt="VitalLink Logo" style={{height:'6vw', height:'8vh'}}/>
+        <Typography>VitalLink</Typography>
+        </IconButton>
+      </Toolbar>
       <Divider />
       <List>
-        {['Home', 'Requests', 'Appointments', 'Patients'].map((text, index) => (
+        {['Home', 'Requests', 'Appointments'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton onClick={() => setPortalState(text.toLowerCase())} >
               <ListItemIcon>

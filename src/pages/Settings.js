@@ -4,9 +4,11 @@ import { Paper, Typography, Button, Card, CardContent, CardActions, Grid, Modal,
 const Settings = () => {
   return (
     <div>
-        <Typography variant="h4" component="h2">
-            Settings
-        </Typography>
+        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+            <Typography variant="h4" component="h2">
+                Settings page is under construction
+            </Typography>
+        </Box>
     </div>
   )
 }

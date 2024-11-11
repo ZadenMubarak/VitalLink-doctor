@@ -5,9 +5,13 @@ import { Paper, Typography, Button, Card, CardContent, CardActions, Grid, Modal,
 const Reports = () => {
   return (
     <div>
-        <Typography variant="h4" component="h2">
-            Reports
-        </Typography>
+        
+        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+            <Typography variant="h4" component="h2">
+                Reports page is under construction
+            </Typography>
+        </Box>
+
     </div>
   )
 }

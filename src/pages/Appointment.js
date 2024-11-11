@@ -73,9 +73,9 @@ const AcceptedAppointments = () => {
       {acceptedAppointments.length === 0 ? (
         <Typography>No accepted appointments found.</Typography>
       ) : (
-        <Grid container spacing={2}>
+        <Grid container spacing={2} alignSelf={'center'}>
           {acceptedAppointments.map((appointment) => (
-            <Grid item xs={12} sm={6} md={4} key={appointment.patient_id}>
+            <Grid item xs={12} sm={6} md={4} key={appointment.patient_id} >
               <Card>
                 <CardContent>
                   <Typography variant="h6">{appointment.patient_name}</Typography>
