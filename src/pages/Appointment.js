@@ -71,7 +71,7 @@ const AcceptedAppointments = () => {
         Accepted Appointments
       </Typography>
       {acceptedAppointments.length === 0 ? (
-        <Typography>No accepted appointments found.</Typography>
+        <Typography>Waiting to for your accepted payments, this may take a few seconds.</Typography>
       ) : (
         <Grid container spacing={2} alignSelf={'center'}>
           {acceptedAppointments.map((appointment) => (

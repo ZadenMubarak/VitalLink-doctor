@@ -177,7 +177,7 @@ export default function App() {
     <Paper elevation={3} style={{ alignContent: 'center', justifyContent: 'center' }}>
       {error && <Typography color="error">{error}</Typography>} {/* Show error if any */}
       {appointments.length === 0 ? (
-        <Typography>No pending appointments found.</Typography>
+        <Typography>Waiting for Appointments, this may take a few seconds...</Typography>
       ) : (
         appointments.map((appointment, index) => (
           <React.Fragment key={index}>
@@ -190,8 +190,7 @@ export default function App() {
                 <Typography variant="h5" component="div">{appointment.patient_name}</Typography>
               </CardContent>
               <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
+                <Button size="small" color='info' >View Request</Button>
               </CardActions>
             </Card>
           </React.Fragment>
