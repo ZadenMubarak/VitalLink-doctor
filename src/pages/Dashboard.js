@@ -37,8 +37,6 @@ import Reports from './Reports';
 
 //
 
-// import Logo from '../assets/VitalLink.png'
-import Logo from './assets/VitalLink.png'
 
 const drawerWidth = 240;
 
@@ -80,7 +78,7 @@ function Dashboard(props) {
       <Toolbar>
         <IconButton>
           {/* <MenuIcon /> */}
-          <img src={Logo} alt="VitalLink Logo" style={{height:'6vw', height:'8vh'}}/>
+          <img src={'https://github.com/user-attachments/assets/60da50a6-3e8a-4fff-badf-486df4b219d3'} alt="VitalLink Logo" style={{height:'6vw', height:'8vh'}}/>
         <Typography>VitalLink</Typography>
         </IconButton>
       </Toolbar>
