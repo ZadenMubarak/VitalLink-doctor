@@ -38,7 +38,7 @@ import Reports from './Reports';
 //
 
 // import Logo from '../assets/VitalLink.png'
-import Logo from '/Users/Zaden/Documents/react_proj/VitalLink-doctor/src/assets/VitalLink.png'
+import Logo from './assets/VitalLink.png'
 
 const drawerWidth = 240;
 
