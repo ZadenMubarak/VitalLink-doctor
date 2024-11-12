@@ -179,10 +179,7 @@ function Dashboard(props) {
         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
         <Toolbar />
-        <Typography variant="h4" gutterBottom>
-          Welcome to the Dashboard
-        </Typography>
-
+        
         {isSuperuser && (
           <Typography variant="body1" color="primary" gutterBottom>
             Superuser Access: You have additional permissions.
