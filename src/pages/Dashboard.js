@@ -77,11 +77,11 @@ function Dashboard(props) {
     <div>
       <Toolbar>
         <IconButton>
-          {/* <MenuIcon /> */}
           <img src={'https://github.com/user-attachments/assets/60da50a6-3e8a-4fff-badf-486df4b219d3'} alt="VitalLink Logo" style={{height:'6vw', height:'8vh'}}/>
         <Typography>VitalLink</Typography>
         </IconButton>
       </Toolbar>
+      
       <Divider />
       <List>
         {['Home', 'Requests', 'Appointments'].map((text, index) => (

@@ -35,4 +35,18 @@ const requestMedicalDocuments = async (patientId) => {
     }
   };
 
-requestMedicalDocuments('671cc602bf1587eb52579f65');
+fetch('http://appoftheyear-439917.nw.r.appspot.com/doctor/medical_record/671cc602bf1587eb52579f65', {
+    method: 'GET',
+    credentials:'include',
+    headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+    }
+}).then((data) => {
+    console.log(data);
+}).catch((e) =>{
+    console.log('error: ', e);
+    
+})
+
+// requestMedicalDocuments('671cc602bf1587eb52579f65');

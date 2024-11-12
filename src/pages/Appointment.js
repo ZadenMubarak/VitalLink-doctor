@@ -33,7 +33,7 @@ const AcceptedAppointments = () => {
 
   const requestMedicalDocuments = async (patientId) => {
     try {
-      const response = await fetch(`http://127.0.0.1:5000/doctor/medical_record/${patientId}`, {
+      const response = await fetch(`http://appoftheyear-439917.nw.r.appspot.com/doctor/medical_record/${patientId}`, {
         method: 'GET',
         credentials: 'include',
         headers: {
