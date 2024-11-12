@@ -35,9 +35,6 @@ import Patients from './Patients';
 import Settings from './Settings';
 import Reports from './Reports';
 
-//
-
-
 const drawerWidth = 240;
 
 function Dashboard(props) {

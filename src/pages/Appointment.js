@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Paper, Typography, Button, Card, CardContent, CardActions, Grid, Modal, Box } from '@mui/material';
+import { Paper, Typography, Button, Card, CardContent, CardActions, Grid, Modal, Box, Divider, CardMedia } from '@mui/material';
 
 const AcceptedAppointments = () => {
   const [acceptedAppointments, setAcceptedAppointments] = useState([]);
@@ -65,7 +65,7 @@ const AcceptedAppointments = () => {
   }, []);
 
   return (
-    <Paper elevation={3} style={{ padding: '20px', margin: '20px' }}>
+    <Paper elevation={3} style={{ padding: '20px', margin: '20px' }} textAlign={'center'}>
       {error && <Typography color="error">{error}</Typography>}
       <Typography variant="h5" gutterBottom>
         Accepted Appointments
@@ -73,13 +73,17 @@ const AcceptedAppointments = () => {
       {acceptedAppointments.length === 0 ? (
         <Typography>Waiting to for your accepted payments, this may take a few seconds.</Typography>
       ) : (
-        <Grid container spacing={2} alignSelf={'center'}>
+        <Grid container spacing={2} style={{justifyContent:'center', alignItems:'center'}}>
           {acceptedAppointments.map((appointment) => (
-            <Grid item xs={12} sm={6} md={4} key={appointment.patient_id} >
-              <Card>
+            <Grid item xs={20} sm={10} md={10} key={appointment.patient_id}>
+              <Card raised={true} style={{textAlign:"center"}}>
+
+                <CardMedia sx={{ height: 140 }} image="https://t4.ftcdn.net/jpg/08/54/85/41/240_F_854854118_WTqOEfHVipk2PYT4Xo4oGC2y1Hs4AwUh.jpg" />
+                
                 <CardContent>
                   <Typography variant="h6">{appointment.patient_name}</Typography>
                   <Typography variant="body2">Reason for Visit: {appointment.reason_for_visit}</Typography>
+                  <Divider/>
                   <Typography variant="body2">Appointment Date: {appointment.date_requested}</Typography>
                 </CardContent>
                 <CardActions>

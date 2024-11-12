@@ -52,7 +52,7 @@ const AppointmentDrawer = ({ selectedAppointment, onClose }) => {
     const { patient_id } = selectedAppointment;
 
     try {
-      const response = await fetch(`http://127.0.0.1:5000/doctor/appointments/${patient_id}/decline`, {
+      const response = await fetch(`http://appoftheyear-439917.nw.r.appspot.com/doctor/appointments/${patient_id}/decline`, {
         method: 'POST',
         credentials: 'include',
         headers: {
