@@ -4,6 +4,7 @@ import {
   Card,
   CardContent,
   CardActions,
+  CardMedia,
   Typography,
   Button,
   Drawer,
@@ -186,6 +187,8 @@ export default function App() {
               style={{ textAlign: 'center', margin: '10% auto', cursor: 'pointer' }}
               onClick={() => handleCardClick(appointment)}
             >
+              <CardMedia sx={{ height: 140 }} image="https://t4.ftcdn.net/jpg/08/54/85/41/240_F_854854118_WTqOEfHVipk2PYT4Xo4oGC2y1Hs4AwUh.jpg" />
+              
               <CardContent>
                 <Typography variant="h5" component="div">{appointment.patient_name}</Typography>
               </CardContent>
